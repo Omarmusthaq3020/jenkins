@@ -21,3 +21,9 @@ resource "azurerm_subnet" "vnet_subnet" {
   }
 }
 
+resource "azurerm_subnet" "vm_subnet" {
+  name                 = var.vm_subnet_name
+  resource_group_name  = var.resource_group_name
+  virtual_network_name = azurerm_virtual_network.vnet.name
+  address_prefixes     = var.vm_subnet_prefixes
+}

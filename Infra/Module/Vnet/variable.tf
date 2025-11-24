@@ -37,3 +37,8 @@ variable "delegation_service" {
   description = "Service to delegate the subnet to"
   type        = string
 }
+
+variable "vm_subnet_name" {}
+variable "vm_subnet_prefixes" {
+  type = list(string)
+}
