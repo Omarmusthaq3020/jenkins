@@ -73,9 +73,10 @@ variable "admin_password" {
 
 variable "vm_subnet_name" {
   type = string
+  default = "vm-subnet"
 }
 
 variable "vm_subnet_prefixes" {
   type = list(string)
+  default = ["10.0.2.0/24"]
 }
-
