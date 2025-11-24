@@ -17,19 +17,25 @@ pipeline {
 
         stage('Terraform Init') {
             steps {
-                sh "terraform init"
+                dir('Infra') {
+                    sh "terraform init"
+                }
             }
         }
 
         stage('Terraform Plan') {
             steps {
-                sh "terraform plan"
+                dir('Infra') {
+                    sh "terraform plan"
+                }
             }
         }
 
         stage('Terraform Apply') {
             steps {
-                sh "terraform apply -auto-approve"
+                dir('Infra') {
+                    sh "terraform apply -auto-approve"
+                }
             }
         }
     }
