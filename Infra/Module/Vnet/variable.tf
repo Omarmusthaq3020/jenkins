@@ -38,7 +38,5 @@ variable "delegation_service" {
   type        = string
 }
 
-variable "vm_subnet_name" {}
-variable "vm_subnet_prefixes" {
-  type = list(string)
-}
+variable "vm_subnet_name" { type = string }
+variable "vm_subnet_prefixes" { type = list(string) }

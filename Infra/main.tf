@@ -16,6 +16,9 @@ module "vnet" {
   subnet_name        = var.subnet_name
   subnet_prefixes    = var.subnet_prefixes
 
+  vm_subnet_name     = var.vm_subnet_name
+  vm_subnet_prefixes = var.vm_subnet_prefixes
+
   delegation_name    = var.delegation_name
   delegation_service = var.delegation_service
 }
@@ -31,5 +34,5 @@ module "vm" {
   admin_username = var.admin_username
   admin_password = var.admin_password
 
-  subnet_id = module.vnet.subnet_id
+  subnet_id = module.vnet.vm_subnet_id
 }

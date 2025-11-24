@@ -71,3 +71,11 @@ variable "admin_password" {
   
 }
 
+variable "vm_subnet_name" {
+  type = string
+}
+
+variable "vm_subnet_prefixes" {
+  type = list(string)
+}
+
