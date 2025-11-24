@@ -1,7 +1,7 @@
 module "rg" {
     source = "./Module/RG"
-    resource_group_name = "jenkins-demo-rg"
-    location = "centralindia"
+    resource_group_name = "var.resource_group_name"
+    location = "var.location"
   
 }
 

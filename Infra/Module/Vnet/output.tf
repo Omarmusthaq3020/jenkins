@@ -1,7 +1,7 @@
 output "vnet_name" {
-  value = azurerm_virtual_network.omar.name
+  value = azurerm_virtual_network.vnet.name
 }
 
 output "subnet_name" {
-  value = azurerm_subnet.omar.name
+  value = azurerm_subnet.vnet_subnet.name
 }
