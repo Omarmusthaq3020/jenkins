@@ -47,7 +47,7 @@ variable "sku" {
   default = "18.04-LTS"
 }
 
-variable "version" {
+variable "image_version" {
   type    = string
   default = "latest"
 }
