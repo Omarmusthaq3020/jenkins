@@ -43,3 +43,31 @@ variable "delegation_service" {
   type    = string
   default = "Microsoft.Web/serverFarms"
 }
+
+variable "vm_name" {
+  description = "Name of the Virtual Machine"
+  type        = string
+  default     = "jenkins-vm"
+  
+}
+
+variable "vm_size" {
+  description = "Size of the Virtual Machine"
+  type        = string
+  default     = "Standard_B2s"
+  
+}
+variable "admin_username" {
+  description = "Admin username for the VM"
+  type        = string
+  default     = "azureuser"
+  
+}
+
+variable "admin_password" {
+  description = "Admin password for the VM"
+  type        = string
+  default     = "P@ssw0rd1234!"
+  
+}
+
